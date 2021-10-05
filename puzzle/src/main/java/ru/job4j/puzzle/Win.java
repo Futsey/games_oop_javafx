@@ -34,9 +34,9 @@ public class Win {
 
     public static boolean check(int[][] board) {
         boolean result = false;
-        for (int i = 0; i < board.length; i++) {
-            if (board[i][i] == 1) {
-                if (monoHorizontal(board, i) || monoVertical(board, i)) {
+        for (int k = 0; k < board.length; k++) {
+            if (board[k][k] == 1) {
+                if (monoHorizontal(board, k) || monoVertical(board, k)) {
                     result = true;
                     break;
                 }
