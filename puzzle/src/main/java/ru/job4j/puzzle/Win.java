@@ -26,8 +26,8 @@ public class Win {
 
     public static char[] extractDiagonal(char[][] board) {
         char[] rsl = new char[board.length];
-        for (int i = 0; i < board.length; i++) {
-            rsl[i] = board[i][i];
+        for (int k = 0; k < board.length; k++) {
+            rsl[k] = board[k][k];
         }
         return rsl;
     }
