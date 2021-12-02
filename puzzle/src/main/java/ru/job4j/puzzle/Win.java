@@ -24,22 +24,12 @@ public class Win {
         return result;
     }
 
-    public static char[] extractDiagonal(char[][] board) {
-        char[] rsl = new char[board.length];
-        for (int k = 0; k < board.length; k++) {
-            rsl[k] = board[k][k];
-        }
-        return rsl;
-    }
-
     public static boolean check(int[][] board) {
         boolean result = false;
         for (int k = 0; k < board.length; k++) {
-            if (board[k][k] == 1) {
-                if (monoHorizontal(board, k) || monoVertical(board, k)) {
+            if (board[k][k] == 1 && (monoHorizontal(board, k) || monoVertical(board, k))) {
                     result = true;
                     break;
-                }
             }
         }
         return result;
